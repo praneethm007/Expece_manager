@@ -1,10 +1,16 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button routerLink="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>add-expense</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <p>Expense Page</p>
+<ion-item>
+  <ion-textarea placeholder="Enter more information here..." [(ngModel)]="namee" ></ion-textarea>
+</ion-item>
+<P>{{namee}}</P>
 
 </ion-content>

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-expense.page.scss'],
 })
 export class AddExpensePage implements OnInit {
+  namee ='good ';
 
   constructor() { }
 
