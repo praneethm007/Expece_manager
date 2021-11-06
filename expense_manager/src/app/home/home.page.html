@@ -1,13 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      dandeli expence
+      Dandeli Trip
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Dandeli Trip</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
-  <ion-button>addExpence</ion-button>
-  <ion-button routerLink="/view-expence">viewExpence</ion-button>
+  <div id="container">
+    <ion-button [routerLink]="['/add-expense']">Add Expense</ion-button>
+    <ion-button>View/Edit Expense</ion-button>
+  </div>
 </ion-content>
