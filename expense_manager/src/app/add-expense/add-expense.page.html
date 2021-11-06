@@ -3,14 +3,76 @@
     <ion-buttons slot="start">
       <ion-back-button routerLink="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>add-expense</ion-title>
+    <ion-title>Add Expenditure</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-item>
-  <ion-textarea placeholder="Enter more information here..." [(ngModel)]="namee" ></ion-textarea>
-</ion-item>
-<P>{{namee}}</P>
+  <div>
+    <ion-item>
+      <ion-label position="floating">Date</ion-label>
+      <ion-datetime display-format="D MMM YYYY, h:mm A" picker-format="D MMM YY H:mm" ></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Category</ion-label>
+      <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+        <ion-select-option value="food">Food</ion-select-option>
+        <ion-select-option value="transport">Transport</ion-select-option>
+        <ion-select-option value="hotel">Hotel</ion-select-option>
+        <ion-select-option value="adventures">Adventures</ion-select-option>
+        <ion-select-option value="shopping">Shopping</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Amount</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">People</ion-label>
+      <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+        <ion-select-option value="nikhil">Nikhil</ion-select-option>
+        <ion-select-option value="praneeth">Praneeth</ion-select-option>
+        <ion-select-option value="preethi">Preethi</ion-select-option>
+        <ion-select-option value="gouri">Gouri</ion-select-option>
+        <ion-select-option value="sheeban">Sheeban</ion-select-option>
+        <ion-select-option value="sravan">Sravan</ion-select-option>
+        <ion-select-option value="sai">Sai</ion-select-option>
+        <ion-select-option value="sankeerthana">Sankeerthana</ion-select-option>
+        <ion-select-option value="supriya">Supriya</ion-select-option>
+        <ion-select-option value="meraj">Meraj</ion-select-option>
+        <ion-select-option value="anusha">Anusha</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Location</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Amount paid by</ion-label>
+      <ion-select placeholder="Select One"  cancelText="Nah" okText="Okay!">
+        <ion-select-option value="nikhil">Nikhil</ion-select-option>
+        <ion-select-option value="praneeth">Praneeth</ion-select-option>
+        <ion-select-option value="preethi">Preethi</ion-select-option>
+        <ion-select-option value="gouri">Gouri</ion-select-option>
+        <ion-select-option value="sheeban">Sheeban</ion-select-option>
+        <ion-select-option value="sravan">Sravan</ion-select-option>
+        <ion-select-option value="sai">Sai</ion-select-option>
+        <ion-select-option value="sankeerthana">Sankeerthana</ion-select-option>
+        <ion-select-option value="supriya">Supriya</ion-select-option>
+        <ion-select-option value="meraj">Meraj</ion-select-option>
+        <ion-select-option value="anusha">Anusha</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button color="success">Save</ion-button>
+    <ion-button color="danger">Cancel</ion-button>
+  </div>
 
 </ion-content>
