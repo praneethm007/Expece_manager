@@ -11,11 +11,11 @@
   <div>
     <ion-item>
       <ion-label position="floating">Date</ion-label>
-      <ion-datetime display-format="D MMM YYYY, h:mm A" picker-format="D MMM YY H:mm" ></ion-datetime>
+      <ion-datetime display-format="D MMM YYYY, h:mm A" picker-format="D MMM YY H:mm" [(ngModel)]="datevalue"></ion-datetime>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Category</ion-label>
-      <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+      <ion-select  cancelText="Nah" okText="Okay!" [(ngModel)]="catogery">
         <ion-select-option value="food">Food</ion-select-option>
         <ion-select-option value="transport">Transport</ion-select-option>
         <ion-select-option value="hotel">Hotel</ion-select-option>
@@ -24,13 +24,13 @@
       </ion-select>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Amount</ion-label>
-      <ion-input type="number"></ion-input>
+      <ion-label position="floating" >Amount</ion-label>
+      <ion-input type="number" [(ngModel)]="amount"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">People</ion-label>
-      <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+      <ion-select multiple="true" cancelText="Nah" okText="Okay!" [(ngModel)]="people">
         <ion-select-option value="nikhil">Nikhil</ion-select-option>
         <ion-select-option value="praneeth">Praneeth</ion-select-option>
         <ion-select-option value="preethi">Preethi</ion-select-option>
@@ -46,17 +46,17 @@
     </ion-item>
     <ion-item>
       <ion-label position="floating">Location</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="location"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Description</ion-label>
-      <ion-textarea></ion-textarea>
+      <ion-textarea [(ngModel)]="discription"></ion-textarea>
     </ion-item>
 
     <ion-item>
       <ion-label>Amount paid by</ion-label>
-      <ion-select placeholder="Select One"  cancelText="Nah" okText="Okay!">
+      <ion-select placeholder="Select One"  cancelText="Nah" okText="Okay!" [(ngModel)]="amountpaidby">
         <ion-select-option value="nikhil">Nikhil</ion-select-option>
         <ion-select-option value="praneeth">Praneeth</ion-select-option>
         <ion-select-option value="preethi">Preethi</ion-select-option>
@@ -71,8 +71,8 @@
       </ion-select>
     </ion-item>
 
-    <ion-button color="success">Save</ion-button>
-    <ion-button color="danger">Cancel</ion-button>
+    <ion-button color="success" (click)="datefun()">Save</ion-button>
+    <ion-button color="danger" routerLink="/home">Cancel</ion-button>
   </div>
 
 </ion-content>
