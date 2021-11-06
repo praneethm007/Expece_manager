@@ -11,6 +11,11 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'view-expence',
+    loadChildren: () => import('./view-expence/view-expence.module').then( m => m.ViewExpencePageModule)
+  },
+
 ];
 
 @NgModule({
