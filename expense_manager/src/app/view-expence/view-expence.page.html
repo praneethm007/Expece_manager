@@ -7,8 +7,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <p>Expense</p>
+<ion-content >
+  <ion-item *ngFor="let expense of expenses" > 
+    <ion-grid>
+      <iom-row>
+        <ion-col col-3>{{expense.datetime}}</ion-col>
+        <ion-col col-3>{{expense.amount}}</ion-col>
+      </iom-row>
+      <ion-row>
+      <ion-col col-3>{{expense.people}}</ion-col>
+    </ion-row>
+    </ion-grid>
+    <!-- <h>{{expense.amount}} {{expense.datetime}} {{expense.people}}</h> -->
+    <ion-button color="danger" (click)="deleteexpense(expense.id)">delete</ion-button>
+  </ion-item>
 
 
 </ion-content>
